@@ -1,12 +1,23 @@
-import axios from "axios"
-import { useEffect } from "react"
+// import axios from "axios"
+// import { useEffect, useState } from "react"
+// import Dasboard from "../pages/Dashboard";
 
 
-const ContentBox =  () => {
-useEffect(()=> {
- const items = axios.get("http://localhost:3000/api/v1/content/get").then((items) => {console.log(items)})
- 
-},[ContentBox])
+
+const ContentBox =  ({items}:any) => {
+
+// const [items, setItems] = useState("null");
+
+// useEffect(() => {
+//   axios.get("http://localhost:3000/api/v1/content/get")
+//     .then((response) => {
+//       setItems(response.data);
+//       console.log(response.data);
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// }, [ContentBox , Dasboard]);
 
 
 
@@ -19,7 +30,7 @@ return (
  <div className="px-6 py-4">
    <div className="font-bold text-xl mb-2">Card Title</div>
    <p className="text-gray-700 text-base">
-     This is a simple card example created using Tailwind CSS
+     {items}
    </p>
  </div>
  <div className="px-6 pt-4 pb-2">

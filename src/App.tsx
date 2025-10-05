@@ -4,6 +4,7 @@ import './App.css'
 import Dasboard from './pages/Dashboard'
 import Signup from './pages/Signup'
 import Signin from './pages/Signin'
+import Create from './components/Create'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <Route path='/dashboard' element={<Dasboard/>} />
     <Route path='/signup' element={<Signup/>} />
     <Route path='/signin' element={<Signin/>}/> 
+    <Route path='/create' element={<Create/>}/>
     </Routes>
     </BrowserRouter>
   )
